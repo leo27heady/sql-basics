@@ -1,5 +1,7 @@
 class Patient:
-    def __init__(self, passport_id, full_name, birthday=None, sex=None):
+    def __init__(
+        self, passport_id=None, full_name=None, birthday=None, sex=None
+    ):
         self.passport_id = passport_id
         self.full_name = full_name
         self.birthday = birthday
@@ -9,10 +11,10 @@ class Patient:
 class Blood_test:
     def __init__(
         self,
-        patient_id,
-        passport_id,
-        hemoglobin_level,
-        glucose_level,
+        patient_id=None,
+        passport_id=None,
+        hemoglobin_level=None,
+        glucose_level=None,
         blood_test_time=None,
     ):
         self.patient_id = patient_id
@@ -23,7 +25,9 @@ class Blood_test:
 
 
 class Covid_analysis:
-    def __init__(self, covid_result, patient_id, covid_test_time=None):
+    def __init__(
+        self, covid_result=None, patient_id=None, covid_test_time=None
+    ):
         self.covid_result = covid_result
         self.patient_id = patient_id
         self.covid_test_time = covid_test_time
